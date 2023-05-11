@@ -37,12 +37,13 @@
 
 #include <Stepper.h>
 
+
 #define STEPS 2038 // steps per revolution for the motor
 #define RPMS 1 // desired motor speed
 
 Stepper stepper(STEPS, 8, 10, 9, 11); //adjust to the pin sequence for your motor
 
-volatile int ledPin = 13;      // the pin that the LED is attached to, needs to be a PWM pin.
+volatile int ledPin = 5;      // the pin that the LED is attached to, needs to be a PWM pin.
 int brightness = 0;
 
 enum devices {
@@ -76,7 +77,7 @@ enum motorDirection {
 };
 
 
-int deviceId = FLIP_FLAT; //set this to FLAT_MAN if you want to remove or not use the motor handling
+int deviceId = FLAT_MAN; //set this to FLAT_MAN if you want to remove or not use the motor handling
 int motorStatus = STOPPED;
 int lightStatus = OFF;
 int coverStatus = CLOSED;
